@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Supplier" max_length="40" name="x_737542_supplier_idsa" type="collection"/>
+    <element extends="task" label="Supplier" max_length="40" name="x_737542_supplier_idsa" type="collection">
+        <element label="Phone" max_length="40" name="phone" type="phone_number_e164"/>
+        <element attributes="edge_encryption_enabled=true" label="CNPJ" mandatory="true" max_length="40" name="u_cnpj" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Company name" mandatory="true" max_length="40" name="u_company_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="E-mail" mandatory="true" max_length="40" name="u_email" type="string"/>
+        <element label="Enable" max_length="40" name="u_enable" read_only="true" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Responsible" mandatory="true" max_length="32" name="u_responsible" reference="sys_user" type="reference"/>
+    </element>
 </database>
